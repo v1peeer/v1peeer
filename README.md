@@ -1,3 +1,5 @@
+![banner](https://i.imgur.com/AQjWuxT.gif)
+
 ### wsg 👋
 - 👤 i'm 1X years old.
 - 👨‍🔬 i have experience in html, py, c# and java
