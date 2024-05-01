@@ -1,0 +1,270 @@
+video {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	object-fit: cover;
+	height: auto;
+	width: auto;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(0, 0, 0, 9);
+}
+
+.video-container {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.video-container video {
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.vidoverlay {
+	position: fixed;
+	mix-blend-mode: screen;
+	opacity: 50%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-color: #111;
+	position: relative;
+}
+
+.glitch {
+	font-family: 'Poppins', sans-serif;
+	font-size: 5.5rem;
+	color: white;
+	text-align: center;
+	position: relative;
+	white-space: nowrap;
+	display: inline-block;
+	animation: slideDown 0.5s forwards;
+	z-index: 1;
+}
+
+.small-text {
+	color: transparent;
+	-webkit-background-clip: text;
+	background: linear-gradient(90deg, #FF0000, #FF3300, #FF6600, #FF9900, #FFCC00, #FFFF00, #CCFF00, #99FF00, #66FF00, #33FF00, #00FF00, #00FF33, #00FF66, #00FF99, #00FFCC, #00FFFF, #00CCFF, #0099FF, #0066FF, #0033FF, #0000FF, #3300FF, #6600FF, #9900FF, #CC00FF, #FF00FF, #FF00CC, #FF0099, #FF0066, #FF0033, #FF0000);
+	background-size: 300% 100%;
+	background-clip: text;
+	font-family: 'Poppins', sans-serif;
+	font-size: 1rem;
+	margin-bottom: 10px;
+	margin-top: -15px;
+	animation: slideDown 0.5s forwards;
+	animation: moveColors 6s linear infinite;
+	z-index: 1;
+}
+
+.buttons {
+	text-align: center;
+	animation: slideUp 0.5s forwards;
+	z-index: 1;
+}
+
+.buttons button {
+	padding: 10px 20px;
+	background-color: #555;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-family: 'Roboto', sans-serif;
+	transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+	background-color: #444;
+}
+
+.signature-text {
+	color: #333;
+	font-family: 'Poppins', sans-serif;
+	font-size: 0.8rem;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	animation: slideUp 0.5s forwards;
+	z-index: 1;
+}
+
+.glitch {
+	font-family: 'Poppins', sans-serif;
+	font-size: 5.5rem;
+	color: white;
+	text-align: center;
+	position: relative;
+	white-space: nowrap;
+	display: inline-block;
+}
+
+.glitch::before,
+.glitch::after {
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	color: var(--glitch-color);
+}
+
+.glitch::before {
+	left: 2px;
+	text-shadow: -2px 0 var(--glitch-color);
+	animation: glitch 1s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+	left: -2px;
+	text-shadow: 2px 0 var(--glitch-color);
+	animation: glitch 2s infinite linear alternate-reverse;
+}
+
+@keyframes moveColors {
+	0% {
+		background-position: 0% 0%;
+	}
+
+	100% {
+		background-position: 300% 0%;
+	}
+}
+
+@keyframes glitch {
+	0% {
+		clip: rect(74px, 9999px, 20px, 0);
+	}
+
+	5% {
+		clip: rect(28px, 9999px, 70px, 0);
+	}
+
+	10% {
+		clip: rect(16px, 9999px, 6px, 0);
+	}
+
+	15% {
+		clip: rect(91px, 9999px, 52px, 0);
+	}
+
+	20% {
+		clip: rect(85px, 9999px, 49px, 0);
+	}
+
+	25% {
+		clip: rect(60px, 9999px, 45px, 0);
+	}
+
+	30% {
+		clip: rect(6px, 9999px, 38px, 0);
+	}
+
+	35% {
+		clip: rect(16px, 9999px, 4px, 0);
+	}
+
+	40% {
+		clip: rect(72px, 9999px, 58px, 0);
+	}
+
+	45% {
+		clip: rect(15px, 9999px, 71px, 0);
+	}
+
+	50% {
+		clip: rect(34px, 9999px, 72px, 0);
+	}
+
+	55% {
+		clip: rect(61px, 9999px, 57px, 0);
+	}
+
+	60% {
+		clip: rect(2px, 9999px, 92px, 0);
+	}
+
+	65% {
+		clip: rect(12px, 9999px, 97px, 0);
+	}
+
+	70% {
+		clip: rect(22px, 9999px, 10px, 0);
+	}
+
+	75% {
+		clip: rect(51px, 9999px, 56px, 0);
+	}
+
+	80% {
+		clip: rect(59px, 9999px, 66px, 0);
+	}
+
+	85% {
+		clip: rect(21px, 9999px, 36px, 0);
+	}
+
+	90% {
+		clip: rect(28px, 9999px, 16px, 0);
+	}
+
+	95% {
+		clip: rect(10px, 9999px, 8px, 0);
+	}
+
+	100% {
+		clip: rect(94px, 9999px, 44px, 0);
+	}
+}
+
+@keyframes slideIn {
+	from {
+		transform: translateY(100%);
+	}
+
+	to {
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideUp {
+	from {
+		transform: translateY(100%);
+	}
+
+	to {
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideDown {
+	from {
+		transform: translateY(-100%);
+	}
+
+	to {
+		transform: translateY(0);
+	}
+}
